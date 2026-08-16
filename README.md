@@ -1,3 +1,7 @@
+
+<img width="2560" height="1280" alt="deepseek-harness" src="https://github.com/user-attachments/assets/904062ea-a929-4915-a7e9-af5d408d0e39" />
+
+
 # deepseek-harness-Install
 deepseek harness 一键安装，双击deepseekharnesssetup.exe就可以一键安装，适合小白！
 
@@ -100,6 +104,19 @@ deepseek harness 一键安装，双击deepseekharnesssetup.exe就可以一键安
 | 浏览器没自动打开 | 手动打开 `http://127.0.0.1:3080`；服务未就绪时先双击 `start.bat` 再打开 |
 | 安装目录损坏/想重装 | 删除原安装目录，再运行安装器重新安装 |
 
+
+特别感谢
+特别感谢 DeepSeek Harness 原始仓库 和 DeepSeek AI 团队。DSH Desktop 基于固定版本的上游源码构建，核心的智能体、模型、工具、会话、Web UI 和插件生态都来自这个项目。
+
+同时感谢 Cordis 项目提供的插件化基础。没有这些开源项目，就不会有 DSH Desktop。
+
+也感谢 Koishi.js 项目和社区长期积累的插件化实践、工具与经验，以及所有参与讨论、测试、反馈和插件开发的社区成员。
+
 ---
+本项目遵循 MIT License。
+
+本项目是基于 DeepSeek Harness 构建的一键安装器，并非 DeepSeek 官方产品。
+
+本项目完全开源免费。如果有人向您以任何形式出售此软件，请拒绝交易。
 
 如有任何问题，请将安装窗口的**完整日志文字**反馈给发布方即可快速定位。
