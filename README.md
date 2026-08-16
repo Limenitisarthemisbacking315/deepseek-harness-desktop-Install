@@ -3,7 +3,7 @@
 
 # DeepSeek Harness desktop 一键安装器（桌面版客户端）使用说明
 
-安装包下载地址：https://github.com/yu-wenchao/deepseek-harness-desktop-Install/releases/tag/v.20
+安装包下载地址：https://github.com/yu-wenchao/deepseek-harness-desktop-Install/releases/download/v.20/DeepSeekHarnessSetup-desktop.exe
 
 DeepSeek Harness（DeepSeek 智能体生产环境）支持一键安装：`DeepSeekHarnessSetup-desktop.exe` 会替你完成**下载源码 → 安装全部依赖 → 配置模型网关 → 启动桌面客户端**的全部工作，全程无需命令行，装完即用。
 
