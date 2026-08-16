@@ -1,7 +1,7 @@
 
 <img width="2560" height="1280" alt="deepseek-harness" src="https://github.com/user-attachments/assets/904062ea-a929-4915-a7e9-af5d408d0e39" />
 
-# DeepSeek Harness 一键安装器（桌面版）使用说明
+# DeepSeek Harness desktop 一键安装器（桌面版客户端）使用说明
 
 DeepSeek Harness（DeepSeek 智能体生产环境）支持一键安装：`DeepSeekHarnessSetup-desktop.exe` 会替你完成**下载源码 → 安装全部依赖 → 配置模型网关 → 启动桌面客户端**的全部工作，全程无需命令行，装完即用。
 
