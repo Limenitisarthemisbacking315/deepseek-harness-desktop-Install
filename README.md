@@ -3,6 +3,9 @@ deepseek harness 一键安装，双击deepseekharnesssetup.exe就可以一键安
 
 安装包下载地址：https://github.com/yu-wenchao/deepseek-harness-Install/releases/tag/v1.0
 
+<img width="622" height="457" alt="安装说明" src="https://github.com/user-attachments/assets/e10a513d-d657-46f6-91a4-ffa61de9b808" />
+
+
 # DeepSeek Harness 一键安装说明
 
 感谢使用 DeepSeekHarnessSetup.exe。本安装器会自动完成全部部署，全程约 **10 ~ 30 分钟**（取决于网速），期间请勿关闭窗口。
